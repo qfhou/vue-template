@@ -1,6 +1,6 @@
 <template>
   <div class="app-container common-list-page">
-    <el-form ref="resetForm" :model="resetForm" :rules="resetFormRules" status-icon label-width="100px">
+    <el-form ref="resetForm" :model="resetForm" :rules="resetFormRules" class="login-form" status-icon label-width="100px">
       <el-form-item label="旧密码：" prop="password">
         <el-input v-model="resetForm.password" type="password" />
       </el-form-item>
@@ -117,4 +117,12 @@ export default {
     margin: 20px 0 0;
   }
 }
+  .login-form {
+    position: relative;
+    width: 520px;
+    max-width: 100%;
+    padding: 160px 35px 0;
+    margin: 0 auto;
+    overflow: hidden;
+  }
 </style>

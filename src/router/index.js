@@ -48,10 +48,34 @@ export const constantRoutes = [
     component: Layout,
     redirect: '/dashboard',
     children: [{
-      path: 'dashboard',
-      name: 'Dashboard',
+      path: '',
+      name: '首页',
       component: () => import('@/views/dashboard/index'),
       meta: { title: '公告信息', icon: 'dashboard' }
+    }]
+  },
+
+  {
+    path: '/studyRecord',
+    component: Layout,
+    redirect: '/studyRecord',
+    children: [{
+      path: '',
+      name: 'StudyRecord',
+      component: () => import('@/views/studyRecord/index'),
+      meta: { title: '学习档案', icon: 'dashboard' }
+    }]
+  },
+
+  {
+    path: '/training',
+    component: Layout,
+    redirect: '/training',
+    children: [{
+      path: '',
+      name: 'Training',
+      component: () => import('@/views/training/index'),
+      meta: { title: '计划内培训', icon: 'dashboard' }
     }]
   },
 
@@ -60,7 +84,7 @@ export const constantRoutes = [
     component: Layout,
     redirect: '/password',
     children: [{
-      path: 'password',
+      path: '',
       name: 'Password',
       component: () => import('@/views/password/index'),
       meta: { title: '修改密码', icon: 'dashboard' }
